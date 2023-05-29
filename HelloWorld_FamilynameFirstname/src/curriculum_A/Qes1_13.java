@@ -6,63 +6,88 @@ public class Qes1_13 {
 		//1,バイト型（byte）,短整数型（short）,整数型（int）,長整数型（long）			
 		//単精度浮動小数点数型（float）,倍精度浮動小数点数型（double）			
 		//文字型（char）,文字列型（String）,ブーリアン型（boolean）			
-
+		byte ten; //バイト型（byte）宣言
+		
+		short onehundred; //短整数型（short）宣言
+		
+		int onethousand; //整数型（int）宣言
+		
+		long tenthousand; //長整数型（long）宣言
+		
+		float f; //単精度浮動小数点数型（float）宣言
+		
+		double d; //倍精度浮動小数点数型（double）宣言
+		
+		char c; //文字型（char）宣言
+		
+		String str; //文字列型（String）宣言
+		
+		boolean bool; //ブーリアン型（boolean)宣言
 		
 		//2,それぞれのローカル変数をローカル内でそれぞれの初期値を代入し初期化してください			
 		// バイト型（byte） 
-		byte ten = 10;   //宣言時、同時に初期化、tenに10を代入
+		ten = 0; //初期化
 
 		// 短整数型（short）
-		short onehundred = 100;  //宣言時、同時に初期化sに100を代入
+		onehundred =0; //初期化
 
 		// 整数型（int）
-		int onethousand = 1000;  //宣言時、同時に初期化iに1000を代入
+		onethousand =0; //初期化
 
 		// 長整数型（long）
-		long tenthousand = 10000L;  //宣言時、同時に初期化lに10000Lを代入
-
+		tenthousand =0; //初期化
+		
 		// 単精度浮動小数点数型（float）
-		float f = 9.5f;  //宣言時、同時に初期化fに9,5を代入
+		f =0; //初期化
 
 		// 倍精度浮動小数点数型（double）
-		double d = 10.5d;  //宣言時、同時に初期化dに10,5を代入
-
+		d =0; //初期化
+		
 		// 文字型（char）
-		char c = 'a';  //宣言時、同時に初期化cにaを代入
-
+		c =0; //初期化
+		
 		// 文字列型（String）
-		String str = "ハロー";  //宣言時、同時に初期化strにハローを代入
+		str =null; //初期化
 
 		// ブーリアン型（boolean）
-		boolean bool = true;  //宣言時、同時に初期化boolにtrueを代入
+		bool =false; //初期化
 
 		//3,初期化をしたそれぞれの変数に下記の値を代入してください			
 
 		// バイト型（byte）
+		ten = 10;   //tenに10を代入
 		System.out.println("バイト型：" + ten); //変数tenの値を表示(バイト型;10)
 
 		// 短整数型（short）
+		onehundred = 100;  // onehundredに100を代入
 		System.out.println("短整数型：" + onehundred); //変数onehundredの値を表示(短整数型:100)
 
 		// 整数型（int）
+		onethousand = 1000;  //onethousandに1000を代入
 		System.out.println("整数型：" + onethousand); //変数onethousandの値を表示(整数型:1000)
 
 		// 長整数型（long）
+		tenthousand = 10000L;  //宣言時、同時に初期化lに10000Lを代入
 		System.out.println("長整数型：" + tenthousand); //変数tenthousandの値を表示(長整数型:10000)
 
 		// 単精度浮動小数点数型（float）
+		f = 9.5f;  //初期化fに9,5を代入
 		System.out.println("単精度浮動小数点数型：" + f); //変数fの値を表示(単精度浮動小数点数型:9.5)
 
 		// 倍精度浮動小数点数型（double）
+		d = 10.5d;  //初期化dに10,5を代入
 		System.out.println("倍精度浮動小数点数型：" + d); //変数dの値を表示(倍精度浮動小数点数型:10.5)
 
 		// 文字型（char）
+		c = 'a';  //初期化cにaを代入
 		System.out.println("文字型：" + c); //変数cの値を表示(文字型:a)
 
 		// 文字列型（String）
+		str = "ハロー";  //初期化strにハローを代入
 		System.out.println("文字列型：" + str); //変数strの値を表示(文字列型:ハロー)
 
 		// ブーリアン型（boolean）
+		bool = true;  //初期化boolにtrueを代入
 		System.out.println("ブーリアン型：" + bool); //変数boolの値を表示(ブーリアン型:true)
 
 		//4,下記の通りにコンソール出力されるようにしてください			
@@ -125,11 +150,9 @@ public class Qes1_13 {
 
 		//9,8で使用した変数【年齢・身長・体重】の数値を和算で自己代入し、下記の通りコンソールに出力してください			
                                          
-		name = name; //名前
 		age = age + 24; //年齢
 		height = height + 168.5; //身長
 		weight = weight + 64.2; //体重
-		food = food; //好きな食べ物
 		BMI = weight / Math.pow(height / 100, 2); //BMI
 		System.out.println("初めまして" + name + "です"); //名前を出力
 		System.out.println("年齢は" + age + "歳です"); //年齢を出力
