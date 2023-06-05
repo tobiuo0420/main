@@ -406,21 +406,21 @@ public class Qes1_13 {
 
 		
 		// ageを文字列型に変換
-		String ageStr =String.valueOf(age);
+		String ageStr = String.valueOf(age);
 
 		
 		// heightを文字列型に変換
-		String heightStr =String.valueOf(height);
+		String heightStr = String.valueOf(height);
 
 		
 		// weightを文字列型に変換
-		String weightStr =String.valueOf(weight);
+		String weightStr = String.valueOf(weight);
 		
 		
 		// 繋げて出力
-		String result ="年齢は" + ageStr +  "歳です。" + " " +
-		               "身長は" + heightStr + "cmです。" +  " " +
-				       "体重は" + weightStr + "kgです。";
+		String result = "年齢は" + ageStr +  "歳です。" + " " +
+		                "身長は" + heightStr + "cmです。" +  " " +
+				        "体重は" + weightStr + "kgです。";
 		
 		
 		// 結果を出力
@@ -434,11 +434,11 @@ public class Qes1_13 {
 		
 		
 		// 年齢をint型に変換
-		int ageInt =Integer.parseInt(ageStr);
+		int ageInt = Integer.parseInt(ageStr);
 
 		
 		// 身長をint型に変換
-		double heightDouble =Double.parseDouble(heightStr);
+		double heightDouble = Double.parseDouble(heightStr);
 		
 		
 		// 年齢を出力
@@ -458,10 +458,10 @@ public class Qes1_13 {
 		
 		
 		// 年齢が25際、または身長が160cm以上の場合
-		boolean result2 = ((age == 25) ||(height >= 160));
+		boolean result2 = (ageInt == 25) || (heightDouble >= 160);
 
 		
-		// result2にtrueを代入
+		// result2の値を出力
 		System.out.println(result2 + "\n");
 
 	}
