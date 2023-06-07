@@ -8,31 +8,31 @@ public class Qes1_13 {
 		//文字型（char）,文字列型（String）,ブーリアン型（boolean)
 		
 		
-		// バイト型(byte)宣言
+		// バイト型宣言
 		byte ten;
 		
-		// 短整数型(short)宣言
+		// 短整数型宣言
 		short onehundred;
 		
-		// 整数型(int)宣言
+		// 整数型宣言
 		int onethousand;
 		
-		// 長整数型(long)宣言
+		// 長整数型宣言
 		long tenthousand;
 		
-		// 単精度浮動小数点数型(float)宣言
+		// 単精度浮動小数点数型宣言
 		float f;
 		
-		// 倍精度浮動小数点数型(double)宣言
+		// 倍精度浮動小数点数型宣言
 		double d;
 		
-		// 文字型(char)宣言
+		// 文字型宣言
 		char c;
 		
-		// 文字列型(String)宣言
+		// 文字列型宣言
 		String str;
 		
-		// ブーリアン型(boolean)宣言
+		// ブーリアン型宣言
 		boolean bool;
 		
 		
@@ -40,31 +40,31 @@ public class Qes1_13 {
 		//初期化してください
 
 		
-		// バイト型(byte)
+		// バイト型
 		ten = 0; // 初期化
 
-		// 短整数型(short)
+		// 短整数型
 		onehundred = 0; // 初期化
 
-		// 整数型(int)
+		// 整数型
 		onethousand = 0; // 初期化
 
-		// 長整数型(long)
+		// 長整数型
 		tenthousand = 0L; // 初期化
 		
-		// 単精度浮動小数点数型(float)
+		// 単精度浮動小数点数型
 		f = 0.0f; // 初期化
 
-		// 倍精度浮動小数点数型(double)
+		// 倍精度浮動小数点数型
 		d = 0.0d; // 初期化
 		
-		// 文字型(char)
+		// 文字型
 		c = '\u0000'; // 初期化
 		
-		// 文字列型(String)
+		// 文字列型
 		str = null; // 初期化
 
-		// ブーリアン型(boolean)
+		// ブーリアン型
 		bool = false; // 初期化
 
 		
@@ -74,75 +74,75 @@ public class Qes1_13 {
 		System.out.println("問3");
 		
 		
-		// バイト型(byte)
+		// バイト型
 		ten = 10; // tenに10を代入
 		
 		
-		// 変数tenの値を表示(バイト型;10)
+		// 変数値を表示
 		System.out.println("バイト型：" + ten);
 
 		
-		// 短整数型(short)
+		// 短整数型
 		onehundred = 100; // onehundredに100を代入
 		
 		
-		// 変数onehundredの値を表示(短整数型:100)
+		// 変数値を表示
 		System.out.println("短整数型：" + onehundred);
 
 		
-		// 整数型(int)
+		// 整数値
 		onethousand = 1000; // onethousandに1000を代入
 		
 		
-		// 変数onethousandの値を表示(整数型:1000)
+		// 変数値を表示
 		System.out.println("整数型：" + onethousand); 
 
 		
-		// 長整数型(long)
+		// 長整数型
 		tenthousand = 10000L; // tenthousandに10000Lを代入
 
 		
-		// 変数tenthousandの値を表示(長整数型:10000)
+		// 変数値を表示
 		System.out.println("長整数型：" + tenthousand); 
 
 		
-		// 単精度浮動小数点数型(float)
+		// 単精度浮動小数点数型
 		f = 9.5f; // fに9,5を代入
 
 		
-		// 変数fの値を表示(単精度浮動小数点数型:9.5)
+		// 変数fの値を表示
 		System.out.println("単精度浮動小数点数型：" + f);
 
 		
-		// 倍精度浮動小数点数型(double)
+		// 倍精度浮動小数点数型
 		d = 10.5d; // dに10,5を代入
 		
 		
-		// 変数dの値を表示(倍精度浮動小数点数型:10.5)
+		// 変数dの値を表示
 		System.out.println("倍精度浮動小数点数型：" + d);
 
 		
-		// 文字型(char)
+		// 文字型
 		c = 'a'; // cにaを代入
 		
 		
-		// 変数cの値を表示(文字型:a)
+		// 変数値を表示
 		System.out.println("文字型：" + c);
 
 		
-		// 文字列型(String)
+		// 文字列型
 		str = "ハロー"; // strにハローを代入
 		
 		
-		// 変数strの値を表示(文字列型:ハロー)
+		// 変数値を表示
 		System.out.println("文字列型：" + str);
 
 		
-		// ブーリアン型(boolean)
+		// ブーリアン型
 		bool = true; // boolにtrueを代入
 		
 		
-		// 変数boolの値を表示(ブーリアン型:true)
+		// 変数値を表示
 		System.out.println("ブーリアン型：" + bool + "\n");
 
 		
@@ -191,15 +191,15 @@ public class Qes1_13 {
 		System.out.println("問5");
 		
 		
-		// 変数numに20の値を代入
+		// 変数に20の値を代入
 		String num = "20";
 
 		
-		// 変数num1に23を代入
+		// 変数に23を代入
 		int num1 = 23;
 		
 		
-		// 変数numの値を整数型に変換、num1と足した値を出力
+		// 変数の値を整数型に変換、num1と足した値を出力
 		System.out.println("ハローJAVA" + (Integer.parseInt(num) + num1 + "\n"));
 		
 		
@@ -301,7 +301,7 @@ public class Qes1_13 {
 
 		
 		// BMI
-		double BMI2 = weight / Math.pow(height / 100, 2);
+		bmi = 22.6;
 
 		
 		// 名前を出力
@@ -325,7 +325,7 @@ public class Qes1_13 {
 		
 		
 		// BMIを出力
-		System.out.println("BMIは" + String.format("%.2f", BMI2) + "です" + "\n");
+		System.out.println("BMIは" + String.format("%.2f", BMI) + "です" + "\n");
 		
 		
 		//9,8で使用した変数【年齢・身長・体重】の数値を和算で自己代入し、
@@ -458,11 +458,11 @@ public class Qes1_13 {
 		
 		
 		// 年齢が25際、または身長が160cm以上の場合
-		boolean result2 = (ageInt == 25) || (heightDouble >= 160);
+		 boolean isConditionTrue = (ageInt == 25) || (heightDouble >= 160);
 
 		
 		// result2の値を出力
-		System.out.println(result2 + "\n");
+		System.out.println(result + "\n");
 
 	}
 }
