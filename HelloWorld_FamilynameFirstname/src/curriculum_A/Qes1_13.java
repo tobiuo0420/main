@@ -216,7 +216,7 @@ public class Qes1_13 {
 
 		// BMIを計算
 		double heightInMeter = height / 100.0;
-		double bmi = weight / (heightInMeter * heightInMeter);
+		double bmi = weight /(heightInMeter * heightInMeter);
 
 	
 		// BMIを出力
@@ -280,7 +280,7 @@ public class Qes1_13 {
 		weight = weight + 64.2;
 
 		// BMI
-		bmi = weight / ((height / 100) * (height / 100));
+		bmi = weight /((height / 100) * (height / 100));
 
 	
 		// 名前を出力
@@ -350,15 +350,15 @@ public class Qes1_13 {
 		// 年齢をint型に変換
 		int ageInt = Integer.parseInt(ageStr);
 
-		// 身長をint型に変換
-		long heightLong = (long) height;
+		// 身長をDouble型に変換(小数点変換)
+		double heightDouble = Double.parseDouble(heightStr);
 
 	
 		// 年齢を出力
 		System.out.println("年齢は" + ageInt + "歳です。");
 
 		// 身長を出力
-		System.out.println("身長は" + heightLong + "cmです。" + "\n");
+		System.out.println("身長は" + heightDouble + "cmです。" + "\n");
 
 	
 		//13,12で変換した【年齢・身長】で
@@ -368,7 +368,7 @@ public class Qes1_13 {
 		System.out.println("問13");
 
 		// 年齢が25際、または身長が160cm以上の場合
-		boolean isConditionTrue = (ageInt == 25) || (heightLong >= 160);
+		boolean isConditionTrue =(ageInt == 25)||(heightDouble >= 160);
 
 		// result2の値を出力
 		System.out.println(result + "\n");
