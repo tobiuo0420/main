@@ -4,107 +4,114 @@ import java.util.Scanner;
 
 public class Qes7 {
 
-     public static void main(String[] args) {
-     // N人の生徒の成績を管理するプログラムを下記条件で作成してください
-     // N人の生徒の成績を入力できるようにしてください 
-     // 入力値は上から英語・数学・理科・社会の点数としてください
-     // 各生徒の科目平均点、全体の科目平均点、
-     // そして各教科の平均点を出力してください
-     // このプログラムの実行は必ず1回以上行われるようにしてください
-     // 出力例を参考にプログラミングを作成してください
+	public static void main(String[] args) {
+		// N人の生徒の成績を管理するプログラムを下記条件で作成してください
+		// N人の生徒の成績を入力できるようにしてください 
+		// 入力値は上から英語・数学・理科・社会の点数としてください
+		// 各生徒の科目平均点、全体の科目平均点、
+		// そして各教科の平均点を出力してください
+		// このプログラムの実行は必ず1回以上行われるようにしてください
+		// 出力例を参考にプログラミングを作成してください
+		 Scanner scanner = new Scanner(System.in);
 
-     // ユーザーの入力を読み取るためのScannerオブジェクトを作成
-     Scanner scanner = new Scanner(System.in);
+	        // 生徒の人数を入力
+	        System.out.print("生徒の人数を入力してください: ");
+	        int numStudents = scanner.nextInt();
 
-     System.out.print("生徒の人数を入力してください :");
+	        // 成績を格納する多次元配列を作成
+	        int[][] scores = new int[numStudents][4];
 
-     int numOfStudents = scanner.nextInt();
+	        // 成績の入力
+	        for (int i = 0; i < numStudents; i++) {
+	            for (int j = 0; j < 4; j++) {
+	                System.out.print((i + 1) + "人目の『" + getSubjectName(j) + "』の点数を入力してください :");
+	                scores[i][j] = scanner.nextInt();
+	            }
+	            System.out.println();
+	        }
 
-     // 各科目の点数を格納するための配列を作成
-     int[] englishScores = new int[numOfStudents];
+	        scanner.close();
 
-     int[] mathScores = new int[numOfStudents];
+	        // 各生徒の科目平均点を計算
+	        double[] studentAverages = calculateStudentAverages(scores);
 
-     int[] scienceScores = new int[numOfStudents];
+	        // 各教科の平均点を計算
+	        double[] subjectAverages = calculateSubjectAverages(scores);
 
-     int[] socialScores = new int[numOfStudents];
+	        // 全体の科目平均点を計算
+	        double overallAverage = calculateOverallAverage(scores);
 
-     // 各生徒の点数を入力
-     for (int i = 0; i < numOfStudents; i++) {
+	        // 各生徒の平均点を出力
+	        for (int i = 0; i < numStudents; i++) {
+	            System.out.printf("%d人目の平均点は%.2f点です。\n", (i + 1), studentAverages[i]);
+	        
+	        }
 
-     System.out.print((i + 1) + "人目の"
-                      + "『英語』の点数を入力してください :");
+	        System.out.println();
+	        
+	        // 各教科の平均点を出力
+	        for (int i = 0; i < 4; i++) {
+	            System.out.printf("%sの平均点は%.2f点です。\n", getSubjectName(i), subjectAverages[i]);
+	        }
+	        
+	        // 全体の科目平均点を出力
+	        System.out.printf("全体の平均点は%.2f点です。\n", overallAverage);
+	    
+	        System.out.println();
+	}
+	
+	    // 科目名を取得
+	    private static String getSubjectName(int subjectIndex) {
+	        String[] subjects = {"英語", "数学", "理科", "社会"};
+	        return subjects[subjectIndex];
+	    }
 
-     englishScores[i] = scanner.nextInt();
+	    // 各生徒の科目平均点を計算
+	    private static double[] calculateStudentAverages(int[][] scores) {
+	        int numStudents = scores.length;
+	        int numSubjects = scores[0].length;
+	        double[] studentAverages = new double[numStudents];
 
-     System.out.print((i + 1) + "人目の"
-                      + "『数学』の点数を入力してください :");
+	        for (int i = 0; i < numStudents; i++) {
+	            int sum = 0;
+	            for (int j = 0; j < numSubjects; j++) {
+	                sum += scores[i][j];
+	            }
+	            studentAverages[i] = (double) sum / numSubjects;
+	        }
 
-     mathScores[i] = scanner.nextInt();
+	        return studentAverages;
+	    }
 
-     System.out.print((i + 1) + "人目の"
-                      + "『理科』の点数を入力してください :");
+	    // 各教科の平均点を計算
+	    private static double[] calculateSubjectAverages(int[][] scores) {
+	        int numStudents = scores.length;
+	        int numSubjects = scores[0].length;
+	        double[] subjectAverages = new double[numSubjects];
 
-     scienceScores[i] = scanner.nextInt();
+	        for (int i = 0; i < numSubjects; i++) {
+	            int sum = 0;
+	            for (int j = 0; j < numStudents; j++) {
+	                sum += scores[j][i];
+	            }
+	            subjectAverages[i] = (double) sum / numStudents;
+	        }
 
-     System.out.print((i + 1) + "人目の"
-                      + "『社会』の点数を入力してください :");
+	        return subjectAverages;
+	    }
 
-     socialScores[i] = scanner.nextInt();
+	    // 全体の科目平均点を計算
+	    private static double calculateOverallAverage(int[][] scores) {
+	        int numStudents = scores.length;
+	        int numSubjects = scores[0].length;
+	        int sum = 0;
 
-     }
+	        for (int i = 0; i < numStudents; i++) {
+	            for (int j = 0; j < numSubjects; j++) {
+	                sum += scores[i][j];
+	            }
+	        }
 
-     // 各生徒の平均点を計算して表示
-     for (int i = 0; i < numOfStudents; i++) {
-
-     double average = (englishScores[i] + mathScores[i] 
-                       + scienceScores[i] + socialScores[i]) / 4.0;
-
-     System.out.println((i + 1)
-	                    + "人目の平均点は" + average + "点です。");
-
-     }
-
-     // 各科目の平均点を計算
-     double englishAverage = calculateAverage(englishScores);
-
-     double mathAverage = calculateAverage(mathScores);
-
-     double scienceAverage = calculateAverage(scienceScores);
-
-     double socialAverage = calculateAverage(socialScores);
-
-     // 全体の平均点を計算
-     double overallAverage = (englishAverage + mathAverage 
-                              + scienceAverage + socialAverage) / 4.0;
-
-     System.out.printf("英語の平均点は%.2f点です。\n", englishAverage);
-
-     System.out.printf("数学の平均点は%.2f点です。\n", mathAverage);
-
-     System.out.printf("理科の平均点は%.2f点です。\n", scienceAverage);
-
-     System.out.printf("社会の平均点は%.2f点です。\n", socialAverage);
-
-     System.out.printf("全体の平均点は%.2f点です。\n", overallAverage);
-
-     // Scannerオブジェクトをクローズ
-     scanner.close();
-
-     }
-
-     // 平均値を計算するメソッド
-     private static double calculateAverage(int[] scores) {
-
-     int sum = 0;
-
-     for (int score : scores) {
-
-          sum += score;
-
-     }
-
-     return sum / (double) scores.length;
-
-   }
-}
+	        return (double) sum / (numStudents * numSubjects);
+	    }
+	}
