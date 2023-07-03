@@ -4,32 +4,17 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Lession1_6Animal {
-	// Animalクラス作成
-	static class Animal {
-		String name;
-		static int count = 0; // countフィールドを追加
+	 static class Animal {
+	        String name;
+	        static int count = 0;
 
-		// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
-		public Animal(String name) {
-			this.name = name;
-			count++; 
-		}
-
-		// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-		public Animal(int count) {
-			this.name = "動物";
-			Animal.count = count; 
-		}
-	}
-
-	static class Dog extends Animal {
-		public Dog(String name) {
-			super(name);
-		}
-	}
+	        public Animal(String name) {
+	            this.name = name;
+	            count++;
+	        }
+	    }
 
 	public static void main(String[] args) {
-
 		// Q1：Animalクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
 		System.out.println("問1");
 
@@ -43,7 +28,7 @@ public class Lession1_6Animal {
 		System.out.println("問2");
 
 		// インスタンスを生成し、動物の数を出力
-		Animal animal2 = new Animal(3);
+		Animal animal2 = new Animal("猫");
 
 		// 動物の数をコンソールに出力
 		System.out.println(Animal.count + "\n");
