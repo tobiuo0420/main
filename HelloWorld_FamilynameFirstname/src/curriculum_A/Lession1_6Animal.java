@@ -4,22 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Lession1_6Animal {
-	 static class Animal {
-	        String name;
-	        static int count = 0;
-
-	        public Animal(String name) {
-	            this.name = name;
-	            count++;
-	        }
-	    }
 
 	public static void main(String[] args) {
 		// Q1：Animalクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
+
 		System.out.println("問1");
 
 		// インスタンスを生成し、名前を出力
-		Animal animal1 = new Animal("犬");
+		animal animal1 = new animal("犬");
 
 		// 動物の名前をコンソールに出力
 		System.out.println(animal1.name + "\n");
@@ -28,10 +20,10 @@ public class Lession1_6Animal {
 		System.out.println("問2");
 
 		// インスタンスを生成し、動物の数を出力
-		Animal animal2 = new Animal("猫");
+		animal animal2 = new animal("猫");
 
 		// 動物の数をコンソールに出力
-		System.out.println(Animal.count + "\n");
+		System.out.println(animal.count + "\n");
 
 		// Q3：現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください。
 		System.out.println("問3");
