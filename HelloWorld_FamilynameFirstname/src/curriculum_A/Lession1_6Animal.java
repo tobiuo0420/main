@@ -11,7 +11,7 @@ public class Lession1_6Animal {
 		System.out.println("問1");
 
 		// インスタンスを生成し、名前を出力
-		Animal animal1 = new Animal("犬");
+		Animal animal1 = new Animal();
 
 		// 動物の名前をコンソールに出力
 		System.out.println(animal1.name + "\n");
@@ -20,7 +20,7 @@ public class Lession1_6Animal {
 		System.out.println("問2");
 
 		// インスタンスを生成し、動物の数を出力
-		Animal animal2 = new Animal("5");
+		Animal animal2 = new Animal();
 
 		// 動物の数をコンソールに出力
 		System.out.println(animal2.number + "\n");

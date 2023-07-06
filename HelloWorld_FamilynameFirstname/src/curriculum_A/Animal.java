@@ -10,8 +10,8 @@ public class Animal {
 	int number;
 
 	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
-	public Animal(String name) {
-		this.name = name;
+	public Animal() {
+		this.name = "犬";
 
 	}
 
