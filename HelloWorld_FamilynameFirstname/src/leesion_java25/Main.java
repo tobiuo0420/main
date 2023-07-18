@@ -1,14 +1,11 @@
 package leesion_java25;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import leesion_java25_2.Person;
 
-public class Main extends Person {
-
-	public Main(String name, int hp, int mp, int attack, int agility, int defense) {
-		super(name, hp, mp, attack, agility, defense);
-	}
+public class Main {
 
 	public static void main(String[] args) {
 
@@ -40,17 +37,26 @@ public class Main extends Person {
 		String name = scanner.nextLine();
 
 		scanner.close();
+		
+		 Random random = new Random();
 
-		// Mainクラスを使用してPersonオブジェクトを作成
-		Main main = new Main(name, 849, 862, 375, 937, 24);
+		// ステータスをランダムに生成する
+        int hp = random.nextInt(1000) + 1;
+        int mp = random.nextInt(1000) + 1;
+        int attack = random.nextInt(500) + 1;
+        int agility = random.nextInt(1000) + 1;
+        int defense = random.nextInt(50) + 1;
 
-		System.out.println("こんにちは 「 " + main.getName() + " 」 さん");
-		System.out.println("ステータス");
-		System.out.println("HP：" + main.getHp());
-		System.out.println("MP：" + main.getMp());
-		System.out.println("攻撃力：" + main.getAttack());
-		System.out.println("素早さ：" + main.getAgility());
-		System.out.println("防御力：" + main.getDefense());
-		System.out.println("\nさあ冒険に出かけよう！");
+        // 生成されたステータスを使ってPersonオブジェクトを作成する
+        Person person = new Person(name, hp, mp, attack, agility, defense);
+
+        System.out.println("こんにちは「 " + person.getName() + " 」さん");
+        System.out.println("ステータス");
+        System.out.println("HP: " + person.getHp());
+        System.out.println("MP: " + person.getMp());
+        System.out.println("攻撃力: " + person.getAttack());
+        System.out.println("素早さ: " + person.getAgility());
+        System.out.println("防御力: " + person.getDefense());
+        System.out.println("\nさあ冒険に出かけよう！");
 	}
 }
