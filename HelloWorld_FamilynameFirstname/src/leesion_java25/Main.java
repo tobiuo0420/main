@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import leesion_java25_2.Person;
+import leesion_java25_2.Player;
 
 public class Main {
 
@@ -48,7 +49,7 @@ public class Main {
         int defense = random.nextInt(50) + 1;
 
         // 生成されたステータスを使ってPersonオブジェクトを作成する
-        Person person = new Person(name, hp, mp, attack, agility, defense);
+        Person person = new  Player(name, hp, mp, attack, agility, defense);
 
         System.out.println("こんにちは「 " + person.getName() + " 」さん");
         System.out.println("ステータス");
