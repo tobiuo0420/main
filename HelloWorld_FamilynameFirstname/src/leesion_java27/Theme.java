@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 	コンソールに下記が入力されたときにコンソール出力結果がコンソールに表示されるように作ってください
 	ライオン:2.1:80,ゾウ:3.2:40,パンダ:1.9:30,チンパンジー:0.94:25,シマウマ:2.4:65,インコ:0.1:50
-	
+
 	コンソール出力結果
-	
+
 	コンソールに文字を入力してください
 	動物名：ライオン
 体長：2.1m
@@ -41,79 +41,79 @@ import java.util.Scanner;
 学名：不明
 
 
-*/
+ */
 
 class Animal {
-    private String name;
-    private double length;
-    private int speed;
-    private String scientificName;
+	private String name;
+	private double length;
+	private int speed;
+	private String scientificName;
 
-    // コンストラクタ
-    public Animal(String name, double length, int speed, String scientificName) {
-        this.name = name;
-        this.length = length;
-        this.speed = speed;
-        this.scientificName = scientificName;
-    }
+	// コンストラクタ
+	public Animal(String name, double length, int speed, String scientificName) {
+		this.name = name;
+		this.length = length;
+		this.speed = speed;
+		this.scientificName = scientificName;
+	}
 
-    // 動物情報を表示するメソッド
-    public void printDetails() {
-        System.out.println("動物名：" + name);
-        System.out.println("体長：" + length + "m");
-        System.out.println("速度：" + speed + "km/h");
-        System.out.println("学名：" + (scientificName != null ? scientificName : "不明"));
-        System.out.println();
-    }
+	// 動物情報を表示するメソッド
+	public void printDetails() {
+		System.out.println("動物名：" + name);
+		System.out.println("体長：" + length + "m");
+		System.out.println("速度：" + speed + "km/h");
+		System.out.println("学名：" + (scientificName != null ? scientificName : "不明"));
+		System.out.println();
+	}
 }
 
 public class Theme {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("コンソールに文字を入力してください");
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("コンソールに文字を入力してください");
 
-        String[] animalNames = {
-            "ライオン",
-            "ゾウ",
-            "パンダ",
-            "チンパンジー",
-            "シマウマ",
-            "インコ"
-        };
+		String[] animalNames = {
+				"ライオン",
+				"ゾウ",
+				"パンダ",
+				"チンパンジー",
+				"シマウマ",
+				"インコ"
+		};
 
-        for (String animalName : animalNames) {
-            String inputData = scanner.nextLine();
-            if (inputData.equals(animalName)) {
-                Animal animal = getAnimalData(animalName);
-                if (animal != null) {
-                    animal.printDetails();
-                } else {
-                    System.out.println("該当する動物名ではありません");
-                }
-            }
-        }
+		for (String animalName : animalNames) {
+			String inputData = scanner.nextLine();
+			if (inputData.equals(animalName)) {
+				Animal animal = getAnimalData(animalName);
+				if (animal != null) {
+					animal.printDetails();
+				} else {
+					System.out.println("該当する動物名ではありません");
+				}
+			}
+		}
 
-        scanner.close();
-    }
+		scanner.close();
+	}
 
-    // 動物名に対応する動物データを返すメソッド
-    public static Animal getAnimalData(String name) {
-        switch (name) {
-            case "ライオン":
-                return new Animal("ライオン", 2.1, 80, "パンテラ レオ");
-            case "ゾウ":
-                return new Animal("ゾウ", 3.2, 40, "ロキソドンタ・サイクロティス");
-            case "パンダ":
-                return new Animal("パンダ", 1.9, 30, "アイルロポダ・メラノレウカ");
-            case "チンパンジー":
-                return new Animal("チンパンジー", 0.94, 25, "パン・トゥログロディテス");
-            case "シマウマ":
-                return new Animal("シマウマ", 2.4, 65, "チャップマンシマウマ");
-            case "インコ":
-                return new Animal("インコ", 0.1, 50, "不明");
-            default:
-                return null; // 該当する動物名でない場合はnullを返す
-        }
-    }
+	// 動物名に対応する動物データを返すメソッド
+	public static Animal getAnimalData(String name) {
+		switch (name) {
+		case "ライオン":
+			return new Animal("ライオン", 2.1, 80, "パンテラ レオ");
+		case "ゾウ":
+			return new Animal("ゾウ", 3.2, 40, "ロキソドンタ・サイクロティス");
+		case "パンダ":
+			return new Animal("パンダ", 1.9, 30, "アイルロポダ・メラノレウカ");
+		case "チンパンジー":
+			return new Animal("チンパンジー", 0.94, 25, "パン・トゥログロディテス");
+		case "シマウマ":
+			return new Animal("シマウマ", 2.4, 65, "チャップマンシマウマ");
+		case "インコ":
+			return new Animal("インコ", 0.1, 50, "不明");
+		default:
+			return null; // 該当する動物名でない場合はnullを返す
+		}
+	}
 }
