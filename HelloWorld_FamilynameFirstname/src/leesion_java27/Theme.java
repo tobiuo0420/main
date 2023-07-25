@@ -80,8 +80,8 @@ public class Theme {
 			String[] details = animalDetail.split(":");
 			if (details.length == 3) {
 				String name = details[0];
-				double length = Double.parseDouble(details[1]);
-				int speed = Integer.parseInt(details[2]);
+				Double.parseDouble(details[1]);
+				Integer.parseInt(details[2]);
 				Animal animal = getAnimalData(name);
 				if (animal != null) {
 					animal.printDetails();
