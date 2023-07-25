@@ -73,19 +73,16 @@ public class Theme {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("コンソールに文字を入力してください");
 
-		String[] animalNames = {
-				"ライオン",
-				"ゾウ",
-				"パンダ",
-				"チンパンジー",
-				"シマウマ",
-				"インコ"
-		};
+		String inputData = scanner.nextLine();
+		String[] animalDetails = inputData.split(",");
 
-		for (String animalName : animalNames) {
-			String inputData = scanner.nextLine();
-			if (inputData.equals(animalName)) {
-				Animal animal = getAnimalData(animalName);
+		for (String animalDetail : animalDetails) {
+			String[] details = animalDetail.split(":");
+			if (details.length == 3) {
+				String name = details[0];
+				double length = Double.parseDouble(details[1]);
+				int speed = Integer.parseInt(details[2]);
+				Animal animal = getAnimalData(name);
 				if (animal != null) {
 					animal.printDetails();
 				} else {
@@ -97,7 +94,6 @@ public class Theme {
 		scanner.close();
 	}
 
-	// 動物名に対応する動物データを返すメソッド
 	public static Animal getAnimalData(String name) {
 		switch (name) {
 		case "ライオン":
@@ -113,7 +109,7 @@ public class Theme {
 		case "インコ":
 			return new Animal("インコ", 0.1, 50, "不明");
 		default:
-			return null; // 該当する動物名でない場合はnullを返す
+			return null;
 		}
 	}
-}
+}	
