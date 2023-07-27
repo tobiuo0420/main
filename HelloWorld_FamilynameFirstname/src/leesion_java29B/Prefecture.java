@@ -1,5 +1,6 @@
 package leesion_java29B;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import leesion_java29.Theme29; // Theme29 クラスをインポート
@@ -7,11 +8,15 @@ import leesion_java29.Theme29; // Theme29 クラスをインポート
 public class Prefecture {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("コンソールに数字と昇順・降順の値を入力してください");
+		System.out.println("0～10の数字をカンマ区切りで入力して下さい");
 		String input = scanner.nextLine();
 
+		System.out.println("昇順、降順どちらにしますか");
+		System.out.println("昇順なら0、降順なら1を入力してください");
+		int sortOrder = scanner.nextInt();
+
 		String[] prefIds = input.split(",");
-		int[] sortedIds = sortIds(prefIds);
+		int[] sortedIds = sortIds(prefIds, sortOrder);
 
 		for (int id : sortedIds) {
 			Theme29 theme29 = getTheme29Data(id); // Theme29 クラスのインスタンスを取得
@@ -25,15 +30,29 @@ public class Prefecture {
 		scanner.close();
 	}
 
-	// 都道府県IDの配列を昇順にソートする
-	public static int[] sortIds(String[] prefIds) {
+	// 都道府県IDの配列をソートする
+	public static int[] sortIds(String[] prefIds, int sortOrder) {
 		int n = prefIds.length;
 		int[] ids = new int[n];
 		for (int i = 0; i < n; i++) {
 			ids[i] = Integer.parseInt(prefIds[i]);
 		}
 
-		// ここでidsを昇順にソートする処理を実装する（例：バブルソートなど）
+		if (sortOrder == 0) {
+			Arrays.sort(ids); // 昇順にソート
+		} else if (sortOrder == 1) {
+			int left = 0;
+			int right = n - 1;
+			while (left < right) {
+				int temp = ids[left];
+				ids[left] = ids[right];
+				ids[right] = temp;
+				left++;
+				right--;
+			}
+		} else {
+			System.out.println("無効な選択です。昇順なら0、降順なら1を入力してください。");
+		}
 
 		return ids;
 	}
