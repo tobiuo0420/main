@@ -1,5 +1,6 @@
 package leesion_java31;
 
+//Personクラス
 public class Person {
 	private String firstName;
 	private String lastName;
@@ -21,7 +22,21 @@ public class Person {
 		return firstName + " " + lastName;
 	}
 
-	// buyメソッド
+	// 問題6：Personクラスにインスタンスメソッド「buy」を定義しましょう。
+	// （仮引数：car）
+	
+	// 問題7：buyメソッドの中でsetOwnerメソッドとthisを用いて
+	// ownerフィールドの値をセットしましょう。
+	// 問題8：さらに、「〇〇が購入しました」と出力する処理を追加してください。
+	
+	// 問題9：引数の型が異なるbuyメソッドを定義しましょう。
+	//（仮引数：bicycle）
+	
+	// 問題10：Mainクラスからbuyメソッドを用いて、
+	//「person1」がcarを購入、「person2」が
+	// bicycleを購入するプログラムを作成しましょう。
+	
+	// buyメソッドを定義
 	public void buy(Car car) {
 		car.setOwner(this.fullName());
 		System.out.println(this.fullName() + "が購入しました");
@@ -32,6 +47,8 @@ public class Person {
 		System.out.println(this.fullName() + "が購入しました");
 	}
 
+	
+	
 	// bmiとprintメソッド
 	public double bmi() {
 		return weight / (height * height);
