@@ -11,6 +11,9 @@ class Person {
 
 	// 問題2：問題2：lastNameの値を引数で受け取るコンストラクタを追加で定義してください
 	// ※順番はfirstNameの次
+	// 問題3：作成したコンストラクタの中に
+	// 「Person.count++; this.lastName;」を追加し
+	// lastNameフィールドの値をセットしてください
 	Person(String firstName, String lastName, int age, double height, double weight) {
 		Person.count++;
 		this.firstName = firstName;
@@ -33,9 +36,6 @@ class Person {
 		return this.weight / (this.height * this.height);
 	}
 
-	// 問題3：作成したコンストラクタの中に
-	// 「Person.count++; this.lastName;」を追加し
-	// lastNameフィールドの値をセットしてください
 	public static void printCount() {
 		System.out.println("合計" + Person.count + "人です");
 	}
