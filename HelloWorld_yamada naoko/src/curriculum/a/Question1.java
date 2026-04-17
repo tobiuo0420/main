@@ -3,34 +3,34 @@ package curriculum.a;
 public class Question1 {
 
 	public static void main(String[] args) {
-	/* Q1 各型䛾変数を宣言し、初期値を設定してください。*/
+	/* Q1 各型に変数を宣言し、初期値を設定してください。*/
 	
 	/* byte 変数byteNumの初期値を設定*/
-	byte byteNum = 0;
+	byte byteNum = 10;
 	
 	/*short 変数shortNumの初期値を設定 */
-	short shortNum = 0;
+	short shortNum = 22;
 	
 	/*int 変数intNumの初期値を設定*/
-	int intNum = 0;
+	int intNum = 25;
 	
 	/*long 変数longNumの初期値を設定*/
-	long longNum = 0L;
+	long longNum = 6L;
 	
 	/*float 変数floatNumの初期値を設定*/
-	float floatNum = 0.0f;
+	float floatNum = 3.9f;
 	
 	/*double 変数doubleNumの初期値を設定*/
-	double doubleNum = 0.0;
+	double doubleNum = 9.7;
 	
 	/*char 変数letterの初期値を設定*/
-	char letter = 'a';
+	char letter = 'B';
 	
 	/*String 変数lettersの初期値を設定*/
-	String letters = "abc";
+	String letters = "apple";
 	
 	/*boolean 変数isBooleanの初期値を設定*/
-	boolean isBoolean = true;
+	boolean isBoolean = false;
 	
 	
 	/* Q2 1で宣言した各型の変数に指定された値を代入してください*/
@@ -162,7 +162,7 @@ public class Question1 {
 	int b = 20;
 	
 	/*a が b より小さいかどうかをboolean変数resultに代入*/
-	boolean result = a < b;
+	boolean result = (a < b) ? true : false;
 	
 	/*resultの値を表示*/
 	System.out.println(result);
