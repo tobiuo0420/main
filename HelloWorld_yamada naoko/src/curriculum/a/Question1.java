@@ -6,28 +6,28 @@ public class Question1 {
 	/* Q1 各型に変数を宣言し、初期値を設定してください。*/
 	
 	/* byte 変数byteNumの初期値を設定*/
-	byte byteNum = 10;
+	byte byteNum = 0;
 	
 	/*short 変数shortNumの初期値を設定 */
-	short shortNum = 22;
+	short shortNum = 0;
 	
 	/*int 変数intNumの初期値を設定*/
-	int intNum = 25;
+	int intNum = 0;
 	
 	/*long 変数longNumの初期値を設定*/
-	long longNum = 6L;
+	long longNum = 0L;
 	
 	/*float 変数floatNumの初期値を設定*/
-	float floatNum = 3.9f;
+	float floatNum = 0.0f;
 	
 	/*double 変数doubleNumの初期値を設定*/
-	double doubleNum = 9.7;
+	double doubleNum = 0.0;
 	
 	/*char 変数letterの初期値を設定*/
-	char letter = 'B';
+	char letter = '\u0000';
 	
 	/*String 変数lettersの初期値を設定*/
-	String letters = "apple";
+	String letters = "null";
 	
 	/*boolean 変数isBooleanの初期値を設定*/
 	boolean isBoolean = false;
