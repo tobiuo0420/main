@@ -27,7 +27,7 @@ public class Question1 {
 	char letter = '\u0000';
 	
 	/*String 変数lettersの初期値を設定*/
-	String letters = "null";
+	String letters = null;
 	
 	/*boolean 変数isBooleanの初期値を設定*/
 	boolean isBoolean = false;
