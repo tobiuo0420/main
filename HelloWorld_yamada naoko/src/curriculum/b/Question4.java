@@ -88,9 +88,6 @@ public class Question4 {
 			System.out.println(input + " は配列に含まれていません\n");
 		}
 
-		// Scannerは最後に1回だけ閉じる
-		sc.close();
-
 		/* Q7 2次元配列 int[][] array = {{1, 2}, {3, 4}, {5, 6}}; を用意する
 		配列の すべての要素を表示 */
 
@@ -160,6 +157,8 @@ public class Question4 {
 				for (int num : arr1D) {
 					System.out.print(num + " ");
 
+					// Scannerは最後に1回だけ閉じる
+					sc.close();
 				}
 
 			}
