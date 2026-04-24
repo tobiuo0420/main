@@ -157,12 +157,11 @@ public class Question4 {
 				for (int num : arr1D) {
 					System.out.print(num + " ");
 
-					// Scannerは最後に1回だけ閉じる
-					sc.close();
 				}
-
 			}
-
 		}
+		
+		// Scannerは最後に1回だけ閉じる
+		sc.close();
 	}
 }
