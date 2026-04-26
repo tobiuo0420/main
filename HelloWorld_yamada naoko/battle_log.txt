@@ -1,0 +1,13 @@
+=== バトル開始 ===
+aaa → Daemon HP:69
+Daemon → aaa HP:63
+aaa → Daemon HP:53
+Daemon → aaa HP:51
+aaa → Daemon HP:37
+Daemon → aaa HP:39
+aaa → Daemon HP:21
+Daemon → aaa HP:27
+aaa → Daemon HP:5
+Daemon → aaa HP:15
+aaa → Daemon HP:-11
+Playerの勝利！
